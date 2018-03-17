@@ -1,16 +1,18 @@
 ﻿<ControlTemplate xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:local="clr-namespace:MalinesCommon.Windows.ModernStyle.InternalResources"
                  xmlns:base="clr-namespace:MalinesCommon.Windows.ModernStyle.InternalBases"
                  xmlns:modern="clr-namespace:MalinesCommon.Windows.ModernStyle"
                  xmlns:elements="clr-namespace:MalinesCommon.Windows.ModernStyle.InternalElements"
                  TargetType="modern:ModernWindow">
     <Border BorderThickness="1" BorderBrush="{Binding Binding_BorderBrush}" Width="600" Height="400">
+        <!--  d:DataContext="{d:DesignInstance Type=elements:ModernWindowViewModel}" -->
         <Border.DataContext>
-            <elements:ModernWindowViewModel/>
+            <elements:ModernWindowViewModel Binding_MainElement="{x:Reference MainElement}"/>
         </Border.DataContext>
 
-        <Grid>
+        <Grid x:Name="MainElement">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
