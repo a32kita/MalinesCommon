@@ -73,6 +73,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Windows\BackingedViewModelException.cs" />
+    <Compile Include="Windows\DependencyObjectExtensions.cs" />
     <Compile Include="Windows\ModernStyle\InternalBases\ModernWindowBase.cs" />
     <Compile Include="Windows\ModernStyle\InternalElements\ModernWindowViewModel.cs" />
     <Compile Include="Windows\ModernStyle\ModernWindow.cs" />
